@@ -1,0 +1,86 @@
+.login-form {
+    max-width: 300px;
+}
+.login-form-forgot {
+    float: right;
+}
+.login-form-button {
+    width: 100%;
+}
+
+.login-page {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../asset/login1.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    z-index: 99;
+}
+.page-title {
+    margin-left: 25px;
+}
+
+.login-container {
+    position:relative;
+    width: 400px;
+    margin-right: 700px;
+}
+
+.login-content {
+    margin-top: 40px;
+}
+.login-page .login-container .login-box {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px 50px 20px 50px;
+    backface-visibility: hidden;
+    background: linear-gradient(30deg, rgba(53, 57, 74, 0) 0%, rgb(255, 255, 255) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(53, 57, 74, 0)', endColorstr='rgb(0, 0, 0)',GradientType=1 );
+    box-shadow: -15px 15px 15px rgba(0,0,0,.4);
+}
+
+/*.ant-btn-primary,.ant-btn-primary:focus{*/
+/*    background-color:#363636;*/
+/*    border-color:#363636;*/
+/*}*/
+
+/*.ant-btn-primary:hover {*/
+/*    background-color:#528B8B;*/
+/*    border-color:#528B8B;*/
+/*}*/
+
+/*a {*/
+/*    color:#363636;*/
+/*}*/
+/*a:hover {*/
+/*    color:#828282;*/
+/*}*/
+
+/*.ant-checkbox-wrapper:hover .ant-checkbox-inner,*/
+/*.ant-checkbox:hover .ant-checkbox-inner,*/
+/*.ant-checkbox-input:focus, .ant-checkbox-input:focus + .ant-checkbox-inner,*/
+/*.ant-checkbox-checked::after {*/
+/*    border: 1px solid #528B8B;*/
+/*}*/
+
+
+/*.ant-checkbox-checked .ant-checkbox-inner,*/
+/*.ant-checkbox-indeterminate .ant-checkbox-inner {*/
+/*    background-color: #528B8B;*/
+/*    border: 1px solid #528B8B;*/
+/*}*/
+
+
+
+
+
+
+

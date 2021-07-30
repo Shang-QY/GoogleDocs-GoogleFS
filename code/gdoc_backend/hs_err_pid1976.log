@@ -1,0 +1,205 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000081e00000 to 0x0000000089e00000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output user may be truncated or incomplete.
+#
+#  Out of Memory Error (c:/BuildAgent/work/5ff2f6c26000d570/src/hotspot/os/windows/os_windows.cpp:3296), pid=1976, tid=10104
+#
+# JRE version:  (11.0.6+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.6+8-b520.43, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:D:\IntelliJ IDEA 2019.3.3\lib\idea_rt.jar=58988:D:\IntelliJ IDEA 2019.3.3\bin -Dfile.encoding=UTF-8 com.reins.bookstore.BookstoreApplication
+
+Host: Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 18362 (10.0.18362.778)
+Time: Fri May 22 22:43:28 2020 ?D1��������?����?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001d1b498e000):  JavaThread "Unknown thread" [_thread_in_vm, id=10104, stack(0x000000c727200000,0x000000c727300000)]
+
+Stack: [0x000000c727200000,0x000000c727300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5de31a]
+V  [jvm.dll+0x710ae5]
+V  [jvm.dll+0x712005]
+V  [jvm.dll+0x7126b3]
+V  [jvm.dll+0x23e3a8]
+V  [jvm.dll+0x5db814]
+V  [jvm.dll+0x5d0a35]
+V  [jvm.dll+0x2faeeb]
+V  [jvm.dll+0x2fae5a]
+V  [jvm.dll+0x2fad32]
+V  [jvm.dll+0x2ffc06]
+V  [jvm.dll+0x348483]
+V  [jvm.dll+0x348b86]
+V  [jvm.dll+0x348583]
+V  [jvm.dll+0x2d57b8]
+V  [jvm.dll+0x2d6957]
+V  [jvm.dll+0x6ef8a7]
+V  [jvm.dll+0x6f109c]
+V  [jvm.dll+0x355a79]
+V  [jvm.dll+0x6d49ee]
+V  [jvm.dll+0x3bf0a3]
+V  [jvm.dll+0x3c15c1]
+C  [jli.dll+0x5363]
+C  [ucrtbase.dll+0x20e82]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001d1b28bff30, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001d1b49b2000 GCTaskThread "GC Thread#0" [stack: 0x000000c727300000,0x000000c727400000] [id=7580]
+  0x000001d1b49e4000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000c727400000,0x000000c727500000] [id=10756]
+  0x000001d1b49e7800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000c727500000,0x000000c727600000] [id=18824]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb767c6027]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001d1b499ae70] Heap_lock - owner thread: 0x000001d1b498e000
+
+Heap address: 0x0000000081e00000, size: 2018 MB, Compressed Oops mode: Non-zero based: 0x0000000081e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.012 Loaded shared library D:\IntelliJ IDEA 2019.3.3\jbr\bin\zip.dll
+Event: 0.013 Loaded shared library D:\IntelliJ IDEA 2019.3.3\jbr\bin\jimage.dll
+
+
+Dynamic libraries:
+0x00007ff6a6fc0000 - 0x00007ff6a6fca000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\java.exe
+0x00007ffbd2fa0000 - 0x00007ffbd3190000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffbd1050000 - 0x00007ffbd1102000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffbd0ca0000 - 0x00007ffbd0f44000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffbd0130000 - 0x00007ffbd022a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffbc0c30000 - 0x00007ffbc0c47000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\VCRUNTIME140.dll
+0x00007ffbc0c10000 - 0x00007ffbc0c29000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\jli.dll
+0x00007ffbd24d0000 - 0x00007ffbd2664000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffbcff30000 - 0x00007ffbcff51000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffbd1db0000 - 0x00007ffbd1dd6000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffbd0230000 - 0x00007ffbd03c4000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffbd0fb0000 - 0x00007ffbd104e000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffbc1110000 - 0x00007ffbc1394000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.836_none_e6c4b943130f18ed\COMCTL32.dll
+0x00007ffbd2990000 - 0x00007ffbd2a2e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffbd2a30000 - 0x00007ffbd2d66000 	C:\WINDOWS\System32\combase.dll
+0x00007ffbd2e40000 - 0x00007ffbd2f60000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffbd00b0000 - 0x00007ffbd0130000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffbd27a0000 - 0x00007ffbd27ce000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffba27a0000 - 0x00007ffba283d000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\msvcp140.dll
+0x00007ffb764e0000 - 0x00007ffb76f9d000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\server\jvm.dll
+0x00007ffbd1730000 - 0x00007ffbd17d3000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffbd1250000 - 0x00007ffbd12e7000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffbd2690000 - 0x00007ffbd2698000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffba98e0000 - 0x00007ffba98e9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffbc91a0000 - 0x00007ffbc91aa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffbcdab0000 - 0x00007ffbcdad4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffbd26a0000 - 0x00007ffbd270f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffbcda30000 - 0x00007ffbcda5d000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffbd03d0000 - 0x00007ffbd041a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffbcfe70000 - 0x00007ffbcfe81000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffbc8fb0000 - 0x00007ffbc8fc1000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\verify.dll
+0x00007ffbce780000 - 0x00007ffbce974000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffbb4d70000 - 0x00007ffbb4d9a000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffbc8f80000 - 0x00007ffbc8fa9000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\java.dll
+0x00007ffbc0c00000 - 0x00007ffbc0c0f000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\instrument.dll
+0x00007ffbc8f60000 - 0x00007ffbc8f78000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\zip.dll
+0x00007ffbc8f50000 - 0x00007ffbc8f5b000 	D:\IntelliJ IDEA 2019.3.3\jbr\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\IntelliJ IDEA 2019.3.3\jbr\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.836_none_e6c4b943130f18ed;D:\IntelliJ IDEA 2019.3.3\jbr\bin\server
+
+VM Arguments:
+jvm_args: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:D:\IntelliJ IDEA 2019.3.3\lib\idea_rt.jar=58988:D:\IntelliJ IDEA 2019.3.3\bin -Dfile.encoding=UTF-8
+java_command: com.reins.bookstore.BookstoreApplication
+java_class_path (initial): E:\study\web\vueend+mongodb\target\classes;C:\Users\13661\.m2\repository\org\springframework\data\spring-data-mongodb\2.2.5.RELEASE\spring-data-mongodb-2.2.5.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\spring-tx\5.2.0.RELEASE\spring-tx-5.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\spring-context\5.2.0.RELEASE\spring-context-5.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\spring-aop\5.2.0.RELEASE\spring-aop-5.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\spring-beans\5.2.0.RELEASE\spring-beans-5.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\spring-core\5.2.0.RELEASE\spring-core-5.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\spring-jcl\5.2.0.RELEASE\spring-jcl-5.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\spring-expression\5.2.0.RELEASE\spring-expression-5.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\data\spring-data-commons\2.2.0.RELEASE\spring-data-commons-2.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\mongodb\mongo-java-driver\3.11.1\mongo-java-driver-3.11.1.jar;C:\Users\13661\.m2\repository\org\slf4j\slf4j-api\1.7.28\slf4j-api-1.7.28.jar;C:\Users\13661\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.2.0.RELEASE\spring-boot-starter-web-2.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\boot\spring-boot-starter\2.2.0.RELEASE\spring-boot-starter-2.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\boot\spring-boot\2.2.0.RELEASE\spring-boot-2.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.2.0.RELEASE\spring-boot-autoconfigure-2.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.2.0.RELEASE\spring-boot-starter-logging-2.2.0.RELEASE.jar;C:\Users\13661\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.ja
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2116026368                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7549744                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244108496                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\Java\jdk1.8.0_91
+CLASSPATH=.;D:\Java\jdk1.8.0_91\lib\dt.jar;D:\Java\jdk1.8.0_91\lib\tools.jar;
+PATH=C:\ProgramData\Oracle\Java\javapath;D:\Python27\;D:\Python27\Scripts;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Git\cmd;D:\Java\jdk1.8.0_91\bin;D:\Java\jdk1.8.0_91\jre\bin;C:\ProgramData\chocolatey\bin;D:\mysql5.7.25\bin;seSVN\bin:D:\Java\jdk1.8.0_91;E:\BaiduNetdiskDownload\Web\apache-maven-3.6.3\bin;E:\Android\Sdk\platform-tools;E:\Android\Sdk\emulator;E:\Android\Sdk\tools;E:\Android\Sdk\tools\bin;D:\nodejs\;C:\Users\13661\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;D:\IntelliJ IDEA 2019.3.3\bin;;D:\MinGW\bin;"D:\Java\jdk1.8.0_91\bin;";C:\Users\13661\AppData\Roaming\npm;
+USERNAME=13661
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.778)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8066M (485M free)
+TotalPageFile size 15489M (AvailPageFile size 60M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 57M, peak: 185M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.6+8-b520.43) for windows-amd64 JRE (11.0.6+8-b520.43), built on Feb  3 2020 14:18:56 by "" with MS VC++ 14.0 (VS2015)
+
+END.
